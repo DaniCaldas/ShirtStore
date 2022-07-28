@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h4,p,h1{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    background-image: linear-gradient(to bottom ,#9DDED6,#78BEBB, #4B9093,#36757E);
+    width: 90%;
+    max-height:240em;
+    justify-content: center;
+    margin:0 auto;
+    padding-top: 2em;
+    flex-wrap: wrap;
+}
+h1{
+    text-align: center;
+}
+
+.carrosel{
+    display: flex;
+    display: grid;
+    
+    justify-content: center;
+    flex-direction: row;
+}
+
+@media(min-width:600px){
+    .carrosel{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .catalogo {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (min-width:900px){
+    .carrosel{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .catalogo ul{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+.items{
+   display: flex;
+   list-style: none;
+   padding: 1em;
+   padding-top: 2em;
+} 
+
+.items *{
+    transition: 400ms;
+}
+
+.images{
+    display: flex;
+    
+}
+
+.image_costas{
+    display:none;
+    
+}
+.image{
+    display: flex;
+    
+}
+.image img{
+    width: 16em;
+    height: 16em;
+}
+
+.over_image{
+    margin-left: 10px;
+    width: 4em;
+    height: 4em;
+}
+.over_image:hover > .image_costas{
+    display: flex;
+    position: absolute;
+    margin: -5.3em -16.6em;
+}
+.over_image:hover > .image_costas img{
+    width:16em;
+    height:16em;
+}
+
+.over_image img{
+    width: 5em;
+    height: 5em;
+    
+}
+
+.over_image_polo{
+    margin-left: 10px;
+    width: 4em;
+    height: 4em;
+}
+.over_image_polo img{
+    width: 4em;
+    height: 4em;    
+}
+
+.image_polo_costas{
+    display: none;
+}
+
+.over_image_polo:hover  .image_polo_costas{
+    display: flex;
+    position: absolute;
+    margin: -4.3em -16.6em;
+}
+
+.over_image_polo:hover .image_polo_costas img{
+    width:16em;
+    height:16em;
+}
+
+
+.catalogo{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.catalogo ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding-bottom: 2em;
+    display: grid;
+}
+
+.catalogo li img{
+    height: 15em;    
+}
+
+.catalogo h3{
+    padding-bottom: 2em;
+}
+.catalogo h3 strong{
+    color: #4f06a3;
+}
+.catalogo h2{
+    padding-bottom: 2em;
+}

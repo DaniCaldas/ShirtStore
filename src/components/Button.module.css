@@ -1,0 +1,76 @@
+.button {
+    --color: #2B9D3D;
+    background-color: #6BD369;
+    font-family: 'Open Sans', sans-serif;
+    justify-content: center;
+    display: flex;
+    width: 7em;
+    overflow: hidden;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    
+}
+
+.button span {
+    display: block;
+    transition: all 0.3s ease-in-out;
+   }
+
+.icon{
+    position: absolute;
+    right: 10em;
+    width: 1.4em;
+    height: 1.4em;
+    color: #96E98B;
+}
+   
+.button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+   }
+   
+.button:hover {
+    color: #96E98B;
+}
+.button:hover span {
+    transform: translateX(10em);
+}
+
+.button:hover .icon{
+    display: flex;
+    margin-top: 5px;
+    position: unset;
+    transform: translateX(2em) scale(1.1);
+    animation: ease-in-out;
+}
+   
+.button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .4s;
+}
+   
+.button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+   
+.button:active:before {
+    background: #6BD369;
+    transition: background 0s;
+}

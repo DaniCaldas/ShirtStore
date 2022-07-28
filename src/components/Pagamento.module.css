@@ -1,0 +1,14 @@
+.select{
+    padding: .2rem ;
+    outline: none;
+    width: 7em;
+    height: 3em;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    border-color: #777;
+}
+.select:hover{
+    outline: none;
+    border-radius: 10px;
+    border-color: black;
+}

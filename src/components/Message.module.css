@@ -1,0 +1,20 @@
+.message{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 500px;
+    border: 3px solid;
+    padding: 1rem;
+    
+}
+
+.success{
+    background-color: #87EC55;
+    color: #066B08;
+    border-image-source: linear-gradient(to bottom right,#53e021,#38C018);
+    border-image-slice: 4;
+}
+
+.error{
+    background-color: #FF7B63;
+    color: black;
+    border-color: #FF3E30;
+}

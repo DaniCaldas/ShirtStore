@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'assing';
+    src: url('../../font/MADE\ Tommy\ Soft\ Thin\ PERSONAL\ USE.otf') format("opentype");
+}
+
+.footer{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right,#4affde 0%,#5b9dff 40%,#9f6bff 60%,#ff34d2 100%);
+    background-size: 200% 200%;
+    animation: gradientEffect 6s linear infinite alternate;
+    border-radius: 4px;
+    height: 4em;
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    
+}
+@keyframes gradientEffect {
+    from{background-position: 0 0 ;}
+    to{background-position: 100% 100%;}
+}
+
+.social_list{
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.social_list li{
+    margin: 0 2em;
+}
+.social_list ul li h4{
+    font-family: 'assing';
+}
+li .icon{
+    width: 1.4em;
+    height: 1.4em;
+}
+li .icon:hover{
+    cursor: pointer;
+    transition: .3s;
+    color: #9DDED6;
+}
+.social_list ul li a:visited{
+    color: black;
+    text-decoration: none;
+}

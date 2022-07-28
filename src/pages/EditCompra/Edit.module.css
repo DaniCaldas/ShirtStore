@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'tommy';
+    src: url('../../font/MADE-Tommy-Soft-Thin-PERSONAL-USE.ttf') format("truetype");
+}
+
+
+@font-face {
+    font-family: 'h3';
+    src: url('../../font/MADE-Tommy-Soft-Bold-PERSONAL-USE.ttf') format("truetype");
+}
+
+.container{
+    min-height: 20em;
+    justify-content: center;
+}
+
+.formdados{
+    background-image: linear-gradient(to bottom,#65AEB1,#36757E,#275E6C);
+    max-width: 25em;
+    min-height: 20em;
+    margin: 0 auto;
+    border: 4px #1B485A solid;
+    border-radius: 2px;
+    justify-content: center;
+}
+.formdados .loader{
+    display: flex;
+    justify-content: center;
+}
+
+.dados h3{
+    background-color: #1B485A;
+    width: 100%;
+    font-family: 'h3';
+    font-weight: 400;
+    
+}
+
+.dados p {
+    width: 50%;
+    height: 1.4em;
+    font-family: 'tommy';
+    font-weight: 700;
+    margin-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.dados h2{
+    font-family: 'h3';
+    text-align: center;
+    
+}
+.formdados a{
+    text-decoration: none;
+}
+.formdados a .buttonreturn{
+    width: 2em;
+    height: 2em;
+    color: #000000;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+.dados{
+    display: flex;
+    flex-direction:column ;
+    justify-content: flex-start;
+}
+
+.editdados{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-left: 2em;
+}
+.editdados h2{
+    font-family: 'h3';
+    padding-bottom: 1em;
+}
+
+.button{   
+    margin: 1em 16em;
+    display: block;
+    width: 7rem;
+    height: 2.4rem;
+    background-color: #6BD369;
+    border: 2px #2B9D3D solid;
+    border-radius: 4px;
+    color:#2B9D3D ;
+    font-size: 15px;
+    font-weight: bold;
+    z-index: 1;
+    cursor: pointer;
+    overflow: hidden;
+    position:relative ;
+    
+}
+.button::before{
+    height: 2.4rem;
+    width: 7rem;
+    background-color: #2B9D3D;
+    content: "";
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.button:hover::before{
+    transform: translateX(0);
+    
+}
+.button:hover{
+    color:#96E98B;
+}

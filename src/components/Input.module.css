@@ -1,0 +1,24 @@
+.input {
+    border: 2px solid #777;
+    border-radius: 10px;
+    padding: 8px 25px;
+    background: transparent;
+    max-width: 140px;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+   
+.input:active {
+    box-shadow: 2px 2px 15px black inset;
+    border-color: black;
+}
+.input::-webkit-input-placeholder{
+    color: black;
+}
+
+.input:hover, .input:focus, .inputGroup:hover .input {
+    outline: none;
+    border-color: #05060f;
+  }
+
+
+   

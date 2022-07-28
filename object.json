@@ -1,0 +1,32 @@
+[
+        {
+            "id":"Camisa do paris",
+            "name":"Camisa do Paris",
+            "image":"https://d2r9epyceweg5n.cloudfront.net/stores/001/865/300/products/0eaf515c-compress11-07df461983003aceab16333713406917-640-0.jpg"
+        },
+        {
+            "id":"Camisa do real",
+            "name":"Camisa do real",
+            "image":"https://d2r9epyceweg5n.cloudfront.net/stores/001/865/300/products/bec24f67_easy-resize-com1-a7710c8c7fbf7fdd3716329633839040-640-0.jpg"
+        },
+        {
+            "id":"Camisa do Liverpool",
+            "name":"Camisa do Liverpool",
+            "image":"https://d2r9epyceweg5n.cloudfront.net/stores/001/865/300/products/a743da8d_easy-resize-com1-b5002bbc31eb49d37d16330529362695-640-0.jpg"
+        },
+        {
+            "id":"Camisa da Holanda",
+            "name":"Camisa da Holanda",
+            "image":"https://d2r9epyceweg5n.cloudfront.net/stores/001/865/300/products/1c8b6a12_easy-resize-com1-7704d3009202f3f6c016328812622390-640-0.jpg"
+        },
+        {
+            "id":"Camisa de Liverpool",
+            "name":"Camisa de Liverpool",
+            "image":"https://d2r9epyceweg5n.cloudfront.net/stores/001/865/300/products/c1f428e7_easy-resize-com1-86f56583480d74f9f116330532079077-640-0.jpg"
+        },
+        {
+            "id":"Camisa do Brasil",
+            "name":"Camisa do Brasil",
+            "image":"https://d2r9epyceweg5n.cloudfront.net/stores/001/865/300/products/bf691f39_easy-resize-com1-5096942a326ec3712316560215740836-640-0.jpg"
+        }     
+]
