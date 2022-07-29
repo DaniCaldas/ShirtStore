@@ -204,7 +204,7 @@ header h1:hover {
     }
 
     .navbar h1{
-        display: block;
+        display: none;
     }
 }
 .List_active{
