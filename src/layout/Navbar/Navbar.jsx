@@ -71,22 +71,8 @@ function Navbar(){
             
            <Link to="/"><h1>ShirtShop</h1></Link>
 
-            <div onClick={navSlide} id='burgerBar' className={style.mobile_menu}>
-                <div className={style.line1}></div>
-                <div className={style.line2}></div>
-                <div className={style.line3}></div>
-            </div>
-
-            <ul id='List' className={style.List}>
-    
-                <li><Link to="/"><AiOutlineHome className={style.icon}/></Link></li>
-                <li><Link to='/Notification'> <AiOutlineBell className={style.icon}/></Link> </li>
-                <li><Link to='/Carrinho'> <AiOutlineShoppingCart  className={style.icon}/> </Link></li>
-
-                <li className={style.search}>
-                
-                    <div className={style.searchbox}>
-                    <AiOutlineSearch className={style.searchIcon}/>
+           <div className={style.searchbox}>
+                   <AiOutlineSearch className={style.searchIcon}/>
                     <input type="text"
                      placeholder='Digite algo...'
                      className={style.searchtxt} 
@@ -94,7 +80,7 @@ function Navbar(){
                         setSearch(event.target.value)
                      }}
                      /> 
-                    </div>
+            </div>
                     <div className={style.template_items}>
                     
                         {cortaVento.filter((cortaVent) =>{
@@ -161,8 +147,20 @@ function Navbar(){
                         }
                     </div>
 
-                </li>
-               
+            <div onClick={navSlide} id='burgerBar' className={style.mobile_menu}>
+                <div className={style.line1}></div>
+                <div className={style.line2}></div>
+                <div className={style.line3}></div>
+            </div>
+
+            <ul id='List' className={style.List}>
+
+                <div className={style.navItems}>
+                    <li><Link to="/"><AiOutlineHome className={style.icon}/></Link></li>
+                    <li><Link to='/Notification'> <AiOutlineBell className={style.icon}/></Link> </li>
+                    <li><Link to='/Carrinho'> <AiOutlineShoppingCart  className={style.icon}/> </Link></li> 
+                </div>
+                
             </ul>
         </header>
     )

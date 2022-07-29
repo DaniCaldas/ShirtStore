@@ -11,7 +11,7 @@ h4,p,h1{
 
 .container{
     background-image: linear-gradient(to bottom ,#9DDED6,#78BEBB, #4B9093,#36757E);
-    width: 90%;
+    width: 100%;
     max-height:240em;
     justify-content: center;
     margin:0 auto;
@@ -25,7 +25,7 @@ h1{
 .carrosel{
     display: flex;
     display: grid;
-    
+    flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
 }
@@ -33,6 +33,10 @@ h1{
 @media(min-width:600px){
     .carrosel{
         grid-template-columns: repeat(1,1fr);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .catalogo {
         grid-template-columns: repeat(1,1fr);
@@ -42,6 +46,8 @@ h1{
 @media (min-width:900px){
     .carrosel{
         grid-template-columns: repeat(3,1fr);
+        display: flex;
+        flex-direction: row;
     }
     .catalogo ul{
         grid-template-columns: repeat(3,1fr);
@@ -52,6 +58,7 @@ h1{
    list-style: none;
    padding: 1em;
    padding-top: 2em;
+   flex-wrap: wrap;
 } 
 
 .items *{
