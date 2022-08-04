@@ -64,6 +64,24 @@ function Navbar(){
                 nav.classList.toggle(style.List_active)
                 burguerBar.classList.toggle(style.toggle)
         }
+        function searchbarOut(){
+            var template_items = document.getElementById('template_items')
+                template_items.classList.add(style.template_items_over)
+                template_items.classList.toggle(style.template_items)
+        }
+        function searchbarOver(){
+            var template_items = document.getElementById('template_items')
+                template_items.classList.remove(style.template_items_over)
+                template_items.classList.add(style.template_items)
+        }
+
+        function navbarOver(){
+            const nav = document.getElementById('List')
+            const burguerBar = document.getElementById('burgerBar')
+
+            nav.classList.toggle(style.List_active)
+            burguerBar.classList.toggle(style.toggle)
+        }
        
 
     return(
@@ -73,7 +91,9 @@ function Navbar(){
 
            <div className={style.searchbox}>
                    <AiOutlineSearch className={style.searchIcon}/>
-                    <input type="text"
+                    <input 
+                     onClick={searchbarOver}
+                     type="text"
                      placeholder='Digite algo...'
                      className={style.searchtxt} 
                      onChange={(event)=>{
@@ -81,7 +101,7 @@ function Navbar(){
                      }}
                      /> 
             </div>
-                    <div className={style.template_items}>
+                    <div id="template_items" onClick={searchbarOut} className={style.template_items}>
                     
                         {cortaVento.filter((cortaVent) =>{
                             if(search ==""){
@@ -156,9 +176,15 @@ function Navbar(){
             <ul id='List' className={style.List}>
 
                 <div className={style.navItems}>
-                    <li><Link to="/"><AiOutlineHome className={style.icon}/></Link></li>
-                    <li><Link to='/Notification'> <AiOutlineBell className={style.icon}/></Link> </li>
-                    <li><Link to='/Carrinho'> <AiOutlineShoppingCart  className={style.icon}/> </Link></li> 
+                    <li onClick={navbarOver}>
+                        <Link to="/"><AiOutlineHome className={style.icon}/></Link>
+                    </li>
+                    <li onClick={navbarOver}>
+                        <Link to='/Notification'> <AiOutlineBell className={style.icon}/></Link>
+                    </li>
+                    <li onClick={navbarOver}>
+                        <Link to='/Carrinho'> <AiOutlineShoppingCart  className={style.icon}/> </Link>
+                    </li> 
                 </div>
                 
             </ul>

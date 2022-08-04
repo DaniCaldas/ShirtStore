@@ -44,11 +44,11 @@ function Carrinho(){
 
     return(
     <div className={style.container}>
-        <h1>Carrinho de Compras</h1>
+        <h2>Carrinho de Compras</h2>
         <div className={style.Items}>
 
             <div>
-               {carrinho.length &&
+               {carrinho.length > 0 &&
                carrinho.map((carrinh) =>
                 <ItemsCard 
                 key={carrinh.id}

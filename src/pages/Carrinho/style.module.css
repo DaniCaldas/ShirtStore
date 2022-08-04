@@ -4,6 +4,7 @@
     min-height: 25em;
     justify-content: center;
     align-items: center;
+    
     display: flex;
 }
 .Items > div{
@@ -22,13 +23,13 @@
     }
 }
 
-.container h1{
+.container h2{
+    color: #fff;
     padding: 1rem;
     font-family: 'Open Sans', sans-serif;
     height: 1.3em;
-    width: auto;
+    text-align: center;
     background-color: #1C6BB7;
     border:none;
-    
 }
 

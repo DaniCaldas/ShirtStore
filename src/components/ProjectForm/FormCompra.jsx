@@ -16,8 +16,7 @@ export default function FormCompra({className,idcamisa}){
         })
         .then((resp) => resp.json())
         .then((data)=>{
-            console.log(data)
-            navigate('/Notification',{state:{message:'Item adicionado ao carrinho com sucesso!, clique no icone para visualizar suas compras.'}})
+            navigate('/Notification',{state:{message:'Item adicionado ao carrinho com sucesso!, clique no icone do Carrinho para visualizar suas compras.'}})
         })
         .catch((err) => console.log(err))
      }

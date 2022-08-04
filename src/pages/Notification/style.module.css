@@ -1,11 +1,12 @@
 .container{
     height: 20em ;
 }
-.container h1{
+.container h2{
     padding: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     height: 1em;
-    width: auto;
+    color: #fff;
+    text-align: center;
     background-color: #1C6BB7;
     border:none;
 }

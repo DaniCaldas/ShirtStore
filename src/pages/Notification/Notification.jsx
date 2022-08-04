@@ -12,7 +12,7 @@ export default function Notification(){
 
     return (
         <div className={style.container}>
-            <h1>Notificações</h1> 
+            <h2>Notificações</h2> 
             <p>aqui você recebe notificações sobre suas compras</p>
             {message && <Message msg={message} type="success"/>}
         </div>

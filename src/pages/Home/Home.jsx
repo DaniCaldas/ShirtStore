@@ -1,5 +1,5 @@
 import style from './style.module.css'
-
+import Loader from '../../components/Loader'
 import Container from '../../layout/container/Container'
 import { Link } from 'react-router-dom' 
 import Portugal from '../../img/Catálogo/Portugal.jpg'
@@ -12,6 +12,7 @@ function Home() {
     const [camisa,setCamisa] = useState([])
     const [camisaPolo,setCamisaPolo] = useState([])
     const [cortaVento,setCortaVento] = useState([])
+    const [removeloader,setRemoveLoader] = useState(false)
 
     useEffect(() =>{
         setTimeout(() => {
@@ -24,6 +25,7 @@ function Home() {
             .then((resp) => resp.json())
             .then((data) =>{
                 setCamisa(data)
+                setRemoveLoader(true)
             })
             .catch((err) => console.log(err))
         },200)
@@ -40,6 +42,7 @@ function Home() {
             .then((resp) => resp.json())
             .then((data) =>{
                 setCamisaPolo(data)
+                setRemoveLoader(true)
             })
             .catch((err) => console.log(err))
         },200)
@@ -56,6 +59,7 @@ function Home() {
             .then((resp) => resp.json())
             .then((data) =>{
                 setCortaVento(data)
+                setRemoveLoader(true)
             })
             .catch((err) => console.log(err))
         },200)
@@ -82,7 +86,7 @@ function Home() {
             </div>
             <h1>Camisas Populares</h1>
             <div className={style.carrosel}>
-            {camisa.length &&
+            {camisa.length > 0 &&
                 camisa.map((camis) =>(
                
                 <ul className={style.items}>
@@ -103,12 +107,13 @@ function Home() {
                 </ul>
                 ))
             }
+            {!removeloader && <Loader/>}
             </div>
             
             <h1>Camisas Polo</h1>
 
             <div className={style.carrosel}>
-            {camisaPolo.length &&
+            {camisaPolo.length > 0 &&
                 camisaPolo.map((camisaPol) =>(
                 <ul className={style.items}>
                     <div className={style.image}>
@@ -127,11 +132,12 @@ function Home() {
                 </ul>
                 ))
             }
+            {!removeloader && <Loader/>}
             </div>
 
             <h1>Corta Vento</h1>
             <div className={style.carrosel}>
-            {cortaVento.length &&
+            {cortaVento.length > 0 &&
                 cortaVento.map((cortaVent) =>(
                 <ul className={style.items}>
                     <div className={style.image}>
@@ -150,6 +156,7 @@ function Home() {
                 </ul>
                 ))
             }
+            {!removeloader && <Loader/>}
             </div>
         </Container>
 
