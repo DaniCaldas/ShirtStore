@@ -4,9 +4,10 @@ import Select from './Select'
 import Button from './Button'
 import Swal from 'sweetalert2/dist/sweetalert2.all'
 import { useState,  useEffect} from 'react'
+import { useParams } from 'react-router-dom'
 import Pagamento from './Pagamento'
 
-export default function NewCompra({itemData,handleSubmit,idcamisa}){
+export default function NewCompra({itemData,handleSubmit}){
 
    function AlertSuccess(){
     Swal.fire({
@@ -18,6 +19,7 @@ export default function NewCompra({itemData,handleSubmit,idcamisa}){
          
    }
 
+   const {id} = useParams()
    const [plataformas, setPlataformas] = useState([])
    const [select, setSelect] = useState([])
    const [item,setItem] = useState(itemData || {})
@@ -76,12 +78,11 @@ export default function NewCompra({itemData,handleSubmit,idcamisa}){
             form: e.target.options[e.target.selectedIndex].text,
         },
         nomeCamisa:{
-            id:idcamisa
+            id:id
         }
         })
     }
 
-    
 
 
     return(
@@ -89,7 +90,6 @@ export default function NewCompra({itemData,handleSubmit,idcamisa}){
     <form onSubmit={submit} >
         <div>
             <div className={style.container}>
-                
                 <p>Tamanho</p>
 
                 <Select
@@ -113,7 +113,6 @@ export default function NewCompra({itemData,handleSubmit,idcamisa}){
                 <Input
                 name='name'
                 handleOnChange={handleChange}
-                
                 value={item.name ? item.name : ''}
                 />
                  <br />

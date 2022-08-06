@@ -7,6 +7,7 @@ import Home from './pages/Home/Home'
 import Footer from './layout/Footer/Footer'
 import Edit from './pages/EditCompra/Edit'
 import Compra from './pages/Compra/Compra'
+import NewCompra from './components/NewCompra'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route  path='/Carrinho' element={<Carrinho/>}> </Route>
         <Route path='/Edit/:id' element={<Edit/>}></Route>
         <Route path='/Compra/:id' element={<Compra/>}></Route>
+        <Route path='/NewCompra/:id' element={<NewCompra/>}></Route>
       </Routes>
 
       </Container>

@@ -69,11 +69,12 @@ export default function Edit(){
                     
                         <h2>Edição da Compra</h2>
 
-                       <h3>Nome Personalizado</h3>
+                        <h2>{Item.nomeCamisa?.id}</h2>
+                        <h3>Nome Personalizado</h3>
                         <p>{Item.name ? Item.name : 'Sem nome personalizado'}</p> 
                         <h3>Tamanho</h3>
                          <p>{Item?.selects?.name}</p>
-                         <h3>Forma de pagamento</h3>
+                        <h3>Forma de pagamento</h3>
                          <p>{Item?.pagamentoForma?.form}</p>
                          
                          <button className={style.button} onClick={toggleItem}>
@@ -86,6 +87,8 @@ export default function Edit(){
                         <>
                         <div className={style.editdados}>
                             <h2>Edição da Compra</h2>
+                            <h3>{Item.nomeCamisa?.id}</h3>
+                            
                             <NewCompra
                             handleSubmit={editItem} 
                             itemData={Item}

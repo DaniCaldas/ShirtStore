@@ -1,7 +1,7 @@
 import NewCompra from '../NewCompra'
 import { useNavigate } from 'react-router-dom'
 
-export default function FormCompra({className,idcamisa}){
+export default function FormCompra({className}){
 
     const navigate = useNavigate()
 
@@ -23,7 +23,7 @@ export default function FormCompra({className,idcamisa}){
 
     return(
         <div  className={className}>
-            <NewCompra idcamisa={idcamisa} handleSubmit={createPost}/>
+            <NewCompra  handleSubmit={createPost}/>
         </div>
     )
 }

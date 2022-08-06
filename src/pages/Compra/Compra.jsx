@@ -61,7 +61,6 @@ export default function Compra(){
             </div>
             
             <FormCompra
-            idcamisa={id}
             className={style.FormCompra}
             />
 
