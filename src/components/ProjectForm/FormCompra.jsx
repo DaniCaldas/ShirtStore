@@ -1,7 +1,7 @@
 import NewCompra from '../NewCompra'
 import { useNavigate } from 'react-router-dom'
 
-export default function FormCompra({className}){
+export default function FormCompra({className,image}){
 
     const navigate = useNavigate()
 
@@ -23,7 +23,7 @@ export default function FormCompra({className}){
 
     return(
         <div  className={className}>
-            <NewCompra  handleSubmit={createPost}/>
+            <NewCompra image={image}  handleSubmit={createPost}/>
         </div>
     )
 }

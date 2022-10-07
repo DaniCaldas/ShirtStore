@@ -3,11 +3,12 @@ import {BsPencil,BsFillTrashFill} from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2/dist/sweetalert2.all'
 
-export default function ItemsCard({camisaNome,forma,tamanho,id,name,handleremove}){
+export default function ItemsCard({camisaNome,camisaImagem,forma,tamanho,id,name,handleremove}){
 
     const remove = (e) =>{
         e.preventDefault()
         handleremove(id)
+
         const Toast = Swal.mixin({
             toast: true,
             position: 'top-end',
@@ -29,13 +30,19 @@ export default function ItemsCard({camisaNome,forma,tamanho,id,name,handleremove
     return(
         <div className={style.container}>
             <h3>{camisaNome}</h3>
+            <img src={camisaImagem} alt="" />
             <h4>Forma de Pagamento</h4>
+            
             <p className={style.category_text}>
             <span className={`${style[forma.toLowerCase()]}`}></span> {forma}
             </p>
+
             <h4>nome personalizado</h4> 
+            
             <p>{name}</p>
+            
             <h4>Tamanho</h4>
+            
             <p>{tamanho}</p>
             
             <div className={style.buttons}>

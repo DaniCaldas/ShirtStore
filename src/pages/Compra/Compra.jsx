@@ -62,6 +62,7 @@ export default function Compra(){
             
             <FormCompra
             className={style.FormCompra}
+            image={cortaVento.imagem || camisaPolo.imagem || camisa.imagem}
             />
 
             <div className={style.descricao}>

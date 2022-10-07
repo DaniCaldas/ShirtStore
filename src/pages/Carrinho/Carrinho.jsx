@@ -44,7 +44,7 @@ function Carrinho(){
 
     return(
     <div className={style.container}>
-        <h2>Carrinho de Compras</h2>
+        <h2>Seu Carrinho</h2>
         <div className={style.Items}>
 
             <div>
@@ -53,6 +53,7 @@ function Carrinho(){
                 <ItemsCard 
                 key={carrinh.id}
                 id={carrinh.id}
+                camisaImagem={carrinh?.nomeCamisa?.imageProduto}
                 camisaNome={carrinh?.nomeCamisa?.id}
                 forma={carrinh?.pagamentoForma?.form}
                 tamanho={carrinh?.selects?.name}

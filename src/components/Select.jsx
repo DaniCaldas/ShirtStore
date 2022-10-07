@@ -9,7 +9,7 @@ export default function Select({options,handleOnChange,value,name}){
         value={value || ''}
         onChange={handleOnChange} 
         className={style.select}>
-            <option>Selecione uma opção</option>
+            
             {    
                 options.map((option) => (
                     <option value={option.id} key={option.id}>

@@ -6,8 +6,9 @@ import Swal from 'sweetalert2/dist/sweetalert2.all'
 import { useState,  useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import Pagamento from './Pagamento'
+import { BsFillFileEarmarkImageFill } from 'react-icons/bs'
 
-export default function NewCompra({itemData,handleSubmit}){
+export default function NewCompra({itemData,handleSubmit,image}){
 
    function AlertSuccess(){
     Swal.fire({
@@ -78,7 +79,8 @@ export default function NewCompra({itemData,handleSubmit}){
             form: e.target.options[e.target.selectedIndex].text,
         },
         nomeCamisa:{
-            id:id
+            id:id,
+            imageProduto:image
         }
         })
     }
