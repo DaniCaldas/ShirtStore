@@ -14,7 +14,6 @@ function App() {
     <Router>
       <Navbar />
       <Container customClass="min-height">
-
       <Routes>
         <Route exact path='/' element={<Home/>}> </Route>
         <Route  path='/Notification' element={<Notification/>}> </Route>

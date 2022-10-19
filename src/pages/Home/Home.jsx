@@ -6,7 +6,17 @@ import Portugal from '../../img/Catálogo/Portugal.jpg'
 import Argentina from '../../img/Catálogo/Argentina.jpg'
 import brasil from '../../img/Catálogo/Brasil.webp'
 import { useEffect, useState } from 'react'
+import brasilSlide from '../../img/Catálogo/camisa-do-brasil-2022.png'
+import argentinaSlide from '../../img/Catálogo/camisa-da-argentina-2022.png'
+import portgualSlide from '../../img/Catálogo/Camisas-de-Portugal-2022-2023-Nike-a-1.png'
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper';
+
+import 'swiper/css';
+import 'swiper/css/autoplay'
+import 'swiper/css/pagination'
+import 'swiper/css/effect-cards'
 function Home() {    
 
     const [camisa,setCamisa] = useState([])
@@ -69,19 +79,27 @@ function Home() {
         
         <article className={style.container}>
         <Container>
+            <Swiper
+            className={style.SlideControl}
+            modules={[Pagination, Autoplay]}
+            pagination={{ clickable: true }}
+            spaceBetween={0}
+            slidesPerView={1}
+            autoplay={true}
+            >
+                <SwiperSlide className={style.slideItem}>
+                    <img src={brasilSlide} alt="" />
+                </SwiperSlide>
+                <SwiperSlide className={style.slideItem}>
+                    <img src={argentinaSlide} alt="" />
+                </SwiperSlide>
+                <SwiperSlide className={style.slideItem}>
+                    <img src={portgualSlide} alt="" />
+                </SwiperSlide>
+            </Swiper>
+
             <div className={style.catalogo}>
                 <h2>Novidades</h2>
-                <ul>
-                    <li>
-                        <img src={Portugal} alt="portugal" />
-                    </li>
-                    <li>    
-                        <img src={brasil} alt="brasil" /> 
-                    </li>
-                    <li>
-                        <img src={Argentina} alt="argentina" /> 
-                    </li>
-                </ul>
                 <h3>Camisas de seleções com <strong>40% de desconto </strong> e frete gratís em todos os items</h3>
             </div>
             <h1>Camisas Populares</h1>

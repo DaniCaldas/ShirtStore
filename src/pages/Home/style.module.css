@@ -30,7 +30,13 @@ h1{
     flex-direction: row;
 }
 
-@media(min-width:600px){
+
+@media(min-width:300px){
+    .SlideControl .slideItem  img{
+       width: 300px;
+    }
+}
+@media (min-width:600px){
     .carrosel{
         grid-template-columns: repeat(1,1fr);
         display: flex;
@@ -38,9 +44,9 @@ h1{
         justify-content: center;
         align-items: center;
     }
-    .catalogo {
-        grid-template-columns: repeat(1,1fr);
-    }
+    .SlideControl .slideItem  img{
+        width: 600px;
+     }
 }
 
 @media (min-width:900px){
@@ -48,9 +54,6 @@ h1{
         grid-template-columns: repeat(3,1fr);
         display: flex;
         flex-direction: row;
-    }
-    .catalogo ul{
-        grid-template-columns: repeat(3,1fr);
     }
 }
 .items{
@@ -129,24 +132,10 @@ h1{
     height:16em;
 }
 
-
 .catalogo{
     justify-content: center;
     text-align: center;
     align-items: center;
-    
-}
-
-.catalogo ul{
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    padding-bottom: 2em;
-    display: grid;
-}
-
-.catalogo li img{
-    height: 15em;    
 }
 
 .catalogo h3{
@@ -157,4 +146,13 @@ h1{
 }
 .catalogo h2{
     padding-bottom: 2em;
+}
+.SlideControl .slideItem{
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  
+}
+.slideItem img{
+    width: 800px;
 }
