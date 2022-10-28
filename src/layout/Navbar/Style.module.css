@@ -76,7 +76,7 @@ header h1:hover {
 }
 
 .searchbox {
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: #174355;
     display: flex;
     align-items: center;
@@ -108,10 +108,9 @@ header h1:hover {
 
 .template_items{
     position: absolute;
-    top: 4em;
+    top: 5em;
     justify-content: center;
     align-items: center;
-    
     overflow-y: scroll;
     max-height: 25em;
 }
@@ -119,12 +118,12 @@ header h1:hover {
 .template_items .items_search {
     padding: 1em;
     background-color: #36757E;
-    height: 7em;
+    height: 10em;
     width:  14em;
     text-align: center;
     align-items: center;
     justify-content: center;
-    border-bottom:4px #174355 solid;
+    border-bottom:3px #174355 solid;
 }
 .template_items .items_search a{
     text-decoration: none;
@@ -139,10 +138,13 @@ header h1:hover {
     letter-spacing: 0;
     padding-top: 3px;
     font-size: 17px;
+    color: #fff;
 }
 .template_items .items_search img{
-    min-width: 6em; 
-    height: 6em;
+    min-width: 8em; 
+    height: 8em;
+    border-radius: 7px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 .template_items_over{
     display: none;
@@ -156,8 +158,10 @@ header h1:hover {
 .mobile_menu div{
     width: 32px;
     height: 2px;
+    padding: 1px;
+    border-radius: 7px;
     background: #fff;
-    margin: 8px;
+    margin: 6px;
     transition: .3s;
 }
 
@@ -234,5 +238,5 @@ header h1:hover {
     opacity: 0;
 }
 .toggle .line3{
-    transform: rotate(45deg) translate(-5px,-8px);
+    transform: rotate(45deg) translate(-5px,-9px);
 }

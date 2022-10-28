@@ -18,6 +18,9 @@ h4,p,h1{
     padding-top: 2em;
     flex-wrap: wrap;
 }
+.container  h1{
+    margin-top: 3em;
+}
 h1{
     text-align: center;
 }
@@ -33,7 +36,7 @@ h1{
 
 @media(min-width:300px){
     .SlideControl .slideItem  img{
-       width: 300px;
+       width: 400px;
     }
 }
 @media (min-width:600px){
@@ -79,17 +82,47 @@ h1{
 }
 .image{
     display: flex;
-    
 }
+.image a:visited{
+    text-decoration: none;
+    color: #fff;
+}
+.image a{
+    text-decoration: none;
+    color: #fff;
+}
+.image .form_desconto{
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 1%;
+    border-radius: 50%;
+    background-color: #27AE60;
+    text-align: center;
+    align-items: center;
+}
+.image .form_desconto p{
+    font-size: 14px;
+    font-weight: bolder;
+    margin-top: 4px;
+}
+
 .image img{
     width: 16em;
     height: 16em;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;  
+    border-radius: 12px;
+}
+.image img:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .over_image{
     margin-left: 10px;
     width: 4em;
     height: 4em;
+    transition: 200ms;
 }
 .over_image:hover > .image_costas{
     display: flex;
@@ -99,6 +132,7 @@ h1{
 .over_image:hover > .image_costas img{
     width:16em;
     height:16em;
+    transition: 200ms;
 }
 
 .over_image img{

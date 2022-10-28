@@ -2,7 +2,7 @@
 
 .container{
     background-image: linear-gradient(to bottom ,#9DDED6,#78BEBB, #4B9093,#36757E);
-    width: 90%;
+    width: 93%;
     justify-content: center;
     display: flex;
     padding: 1em;
@@ -19,7 +19,6 @@ h2,small{
     padding-right: 1em;
 }
 .FormCompra{
-   
     max-height: 25em;
     text-align: center;
     align-items: center;

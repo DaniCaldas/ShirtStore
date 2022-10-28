@@ -136,6 +136,7 @@ function Home() {
                 <ul className={style.items}>
                     <div className={style.image}>
                     <Link to={`/Compra/${camisaPol.id}`}>
+                        <div className={style.form_desconto}><p>40% OFF</p></div>
                         <img  src={camisaPol.imagem} alt=""/> 
                     </Link>
 

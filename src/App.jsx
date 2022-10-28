@@ -9,7 +9,10 @@ import Edit from './pages/EditCompra/Edit'
 import Compra from './pages/Compra/Compra'
 import NewCompra from './components/NewCompra'
 
+
 function App() {
+
+
   return (
     <Router>
       <Navbar />
