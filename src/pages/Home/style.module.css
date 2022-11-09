@@ -33,7 +33,6 @@ h1{
     flex-direction: row;
 }
 
-
 @media(min-width:300px){
     .SlideControl .slideItem  img{
        width: 400px;

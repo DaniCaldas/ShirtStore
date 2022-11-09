@@ -2,13 +2,11 @@ import style from './style.module.css'
 import Loader from '../../components/Loader'
 import Container from '../../layout/container/Container'
 import { Link } from 'react-router-dom' 
-import Portugal from '../../img/Catálogo/Portugal.jpg'
-import Argentina from '../../img/Catálogo/Argentina.jpg'
-import brasil from '../../img/Catálogo/Brasil.webp'
 import { useEffect, useState } from 'react'
 import brasilSlide from '../../img/Catálogo/camisa-do-brasil-2022.png'
 import argentinaSlide from '../../img/Catálogo/camisa-da-argentina-2022.png'
 import portgualSlide from '../../img/Catálogo/Camisas-de-Portugal-2022-2023-Nike-a-1.png'
+import inglaterraSlide from '../../img/Catálogo/camisa-da-inglaterra-2022.jpg'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper';
@@ -95,6 +93,9 @@ function Home() {
                 </SwiperSlide>
                 <SwiperSlide className={style.slideItem}>
                     <img src={portgualSlide} alt="" />
+                </SwiperSlide>
+                <SwiperSlide className={style.slideItem}>
+                    <img src={inglaterraSlide} alt=""/>
                 </SwiperSlide>
             </Swiper>
 
