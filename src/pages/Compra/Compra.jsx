@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 
 export default function Compra(){
+    const api = "https://apirest-shirt-store.vercel.app"
    const {id} = useParams()
 
    const [camisa,setCamisa] = useState([])
@@ -12,7 +13,7 @@ export default function Compra(){
    const [cortaVento,setCortaVento] = useState([])
 
    useEffect(() => {
-    fetch(`https://apirestshirtstore.herokuapp.com/Camisas/${id}`,{
+    fetch(api + `/Camisas/${id}`,{
         method:"GET",
         headers:{
             'Content-type':'application/json'
@@ -26,7 +27,7 @@ export default function Compra(){
    },[id])
 
    useEffect(() => {
-    fetch(`https://apirestshirtstore.herokuapp.com/Camisas_Polo/${id}`,{
+    fetch(api + `/Camisas_Polo/${id}`,{
         method:"GET",
         headers:{
             'Content-type':'application/json'
@@ -40,7 +41,7 @@ export default function Compra(){
    },[id])
 
    useEffect(() => {
-    fetch(`https://apirestshirtstore.herokuapp.com/Corta_Vento/${id}`,{
+    fetch(api + `/Corta_Vento/${id}`,{
         method:"GET",
         headers:{
             'Content-type':'application/json'

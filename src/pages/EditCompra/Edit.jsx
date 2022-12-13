@@ -7,6 +7,8 @@ import {Link} from 'react-router-dom'
 import {BsArrowLeftCircle} from 'react-icons/bs'
 
 export default function Edit(){
+    const api = "https://apirest-shirt-store.vercel.app"
+
     const {id} = useParams()
     const [Item,setItem ] = useState([])
     const [showItemForm, setShowItemForm] = useState(false)
@@ -14,7 +16,7 @@ export default function Edit(){
 
     useEffect(() =>{
         setTimeout(() => {
-            fetch(`https://apirestshirtstore.herokuapp.com/Carrinho/${id}`,{
+            fetch( api + `/Carrinho/${id}`,{
             method:'GET',
             headers:{
                 'Content-type':'application/json'
@@ -36,7 +38,7 @@ export default function Edit(){
 
     function editItem(Item){
 
-        fetch(`https://apirestshirtstore.herokuapp.com/Carrinho/${Item.id}`,{
+        fetch(api + `/Carrinho/${Item.id}`,{
             method:'PATCH',
             headers:{
                 'Content-type':'application/json'

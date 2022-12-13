@@ -26,6 +26,7 @@ export default function ItemsCard({camisaNome,camisaImagem,forma,tamanho,id,name
             title: 'Item Excluído'
           })
     }
+    // className={`${style[forma.toLowerCase()]}`}
 
     return(
         <div className={style.container}>
@@ -34,7 +35,8 @@ export default function ItemsCard({camisaNome,camisaImagem,forma,tamanho,id,name
             <h4>Forma de Pagamento</h4>
             
             <p className={style.category_text}>
-            <span className={`${style[forma.toLowerCase()]}`}></span> {forma}
+            <span></span> 
+                {forma}
             </p>
 
             <h4>nome personalizado</h4> 

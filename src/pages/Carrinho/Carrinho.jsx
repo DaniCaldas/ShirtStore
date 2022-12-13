@@ -6,12 +6,14 @@ import style from './style.module.css'
 
 
 function Carrinho(){
+    const api = "https://apirest-shirt-store.vercel.app"
+
     const [carrinho,setCarrinho] = useState([])
     const [removeloader,setRemoveLoader] = useState(false)
 
     useEffect(()=>{
         setTimeout(()=>{
-            fetch('https://apirestshirtstore.herokuapp.com/Carrinho',{
+            fetch(api + '/Carrinho',{
             method:'GET',
             headers:{
                 'Content-Type':'application/json'
@@ -28,7 +30,7 @@ function Carrinho(){
     },[])
 
     function removeItem(id){
-        fetch(`https://apirestshirtstore.herokuapp.com/Carrinho/${id}`,{
+        fetch(api + `/Carrinho/${id}`,{
             method:'DELETE',
             headers:{
                 'Content-Type':'application/json'
@@ -44,9 +46,11 @@ function Carrinho(){
 
     return(
     <div className={style.container}>
-        <h2>Seu Carrinho</h2>
+    <h2>Seu Carrinho</h2> 
+    
+    {!removeloader && <Loader/>}
+        { carrinho.length  > 0 ?(
         <div className={style.Items}>
-
             <div>
                {carrinho.length > 0 &&
                carrinho.map((carrinh) =>
@@ -60,14 +64,13 @@ function Carrinho(){
                 name={carrinh.name ? carrinh.name : 'Sem nome personalizado!'}
                 handleremove={removeItem}
                 />
-               )} 
-               {!removeloader && <Loader/>}
-
-               {removeloader && carrinho.length === 0 && (
-                <p>Não há compras no carrinho</p>
-               )}
+               )}    
+               
             </div>
         </div>
+        ): <p>Seu carrinho está vazio</p>
+        }
+        
     </div>
     ) 
 }

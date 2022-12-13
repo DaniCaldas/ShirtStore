@@ -2,12 +2,13 @@ import NewCompra from '../NewCompra'
 import { useNavigate } from 'react-router-dom'
 
 export default function FormCompra({className,image}){
+    const api = "https://apirest-shirt-store.vercel.app"
 
     const navigate = useNavigate()
 
     function createPost(Carrinho){
         
-        fetch('https://apirestshirtstore.herokuapp.com/Carrinho',{
+        fetch(api + '/Carrinho',{
             method:'POST',
             headers:{
                 'Content-type':'application/json',

@@ -19,15 +19,17 @@ export default function NewCompra({itemData,handleSubmit,image}){
     })
          
    }
+   const api = "https://apirest-shirt-store.vercel.app"
 
    const {id} = useParams()
    const [plataformas, setPlataformas] = useState([])
    const [select, setSelect] = useState([])
    const [item,setItem] = useState(itemData || {})
 
+   console.log(item)
 
   useEffect(() =>{
-    fetch("https://apirestshirtstore.herokuapp.com/Select",{
+    fetch(api + "/Select",{
         method:"GET",
         headers:{
             "Content-type": "application/json"
@@ -41,7 +43,7 @@ export default function NewCompra({itemData,handleSubmit,image}){
   }, [])
 
   useEffect(() => {
-    fetch("https://apirestshirtstore.herokuapp.com/Plataformas",{
+    fetch(api + "/Plataformas",{
         method:"GET",
         headers:{
             "Content-type":"application/json"

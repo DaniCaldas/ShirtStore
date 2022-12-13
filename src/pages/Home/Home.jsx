@@ -16,6 +16,7 @@ import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
 import 'swiper/css/effect-cards'
 function Home() {    
+    const api = "https://apirest-shirt-store.vercel.app"
 
     const [camisa,setCamisa] = useState([])
     const [camisaPolo,setCamisaPolo] = useState([])
@@ -24,7 +25,7 @@ function Home() {
 
     useEffect(() =>{
         setTimeout(() => {
-            fetch("https://apirestshirtstore.herokuapp.com/Camisas",{
+            fetch(api + '/Camisas',{
                 method:"GET",
                 headers:{
                     'Content-Type':'application/json'
@@ -41,7 +42,7 @@ function Home() {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch("https://apirestshirtstore.herokuapp.com/Camisas_polo",{
+            fetch(api + '/Camisas_polo',{
                 method:"GET",
                 headers:{
                     'Content-Type':'application/json'
@@ -58,7 +59,7 @@ function Home() {
     
     useEffect(() => {
         setTimeout(() => {
-            fetch("https://apirestshirtstore.herokuapp.com/Corta_Vento",{
+            fetch(api + '/Corta_Vento',{
                 method:"GET",
                 headers:{
                     'Content-Type':'application/json'
